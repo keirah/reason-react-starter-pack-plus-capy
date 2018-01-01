@@ -9,10 +9,11 @@
   "package-specs": [
     {
       "module": "es6",
-      "in-source": false
+      "in-source": true
     }
   ],
+  "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["reason-react", "bs-director"],
+  "bs-dependencies": ["reason-react"],
   "refmt": 3
 }

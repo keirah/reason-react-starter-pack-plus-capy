@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const base = {
-  entry: ['react-hot-loader/patch', './lib/es6/src/index.js'],
+  entry: ['react-hot-loader/patch', './src/index.bs.js'],
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'index.js',
@@ -23,9 +23,6 @@ const base = {
         test: /\.js$/,
         use: {
           loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-          },
         },
       },
       {
@@ -58,7 +55,7 @@ const base = {
       },
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: path.join(__dirname, './src/index.html'),
     }),
   ],
 };

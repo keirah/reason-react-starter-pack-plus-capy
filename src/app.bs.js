@@ -3,12 +3,12 @@
 
 import * as Curry             from "bs-platform/lib/es6/curry.js";
 import * as React             from "react";
-import * as ReasonReact       from "reason-react/lib/es6/src/ReasonReact.js";
-import * as JoejoeCapybaraJpg from "../../../src/joejoe-capybara.jpg";
+import * as ReasonReact       from "reason-react/src/ReasonReact.js";
+import * as JoejoeCapybaraJpg from "./joejoe-capybara.jpg";
 
 var component = ReasonReact.statelessComponent("App");
 
-((require('../../../src/App.scss')));
+((require('./app.scss')));
 
 function handleClick(_, _$1) {
   console.log("hey buddy!");
@@ -24,14 +24,16 @@ function make(message, _) {
                       className: "appContainer"
                     }, React.createElement("h1", {
                           className: "appHeader"
-                        }, "Hey Buddy"), React.createElement("img", {
-                          className: "App-capy",
-                          alt: "capybara",
-                          src: JoejoeCapybaraJpg
-                        }), React.createElement("div", {
-                          className: "appButton",
-                          onClick: Curry._1(self[/* handle */0], handleClick)
-                        }, message)));
+                        }, "Hey Buddy"), React.createElement("div", {
+                          className: "buddyBox"
+                        }, React.createElement("img", {
+                              className: "App-capy",
+                              alt: "capybara",
+                              src: JoejoeCapybaraJpg
+                            }), React.createElement("div", {
+                              className: "appButton",
+                              onClick: Curry._1(self[/* handle */0], handleClick)
+                            }, message))));
     });
   return newrecord;
 }
