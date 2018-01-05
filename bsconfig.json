@@ -5,6 +5,7 @@
 {
   "name": "react-template",
   "reason": { "react-jsx": 2 },
+  "bsc-flags": ["-bs-super-errors"],
   "sources": ["src"],
   "package-specs": [
     {
