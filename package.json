@@ -2,18 +2,18 @@
   "name": "manning-test-2-bsb-starter",
   "version": "0.1.0",
   "scripts": {
-    "start":
-      "concurrently --names 'BSB,WEBPACK,OPEN' -c 'bgBlue.bold,bgGreen.bold' 'yarn start:bscript' 'yarn start:webpack' 'yarn open'",
+    "start": "concurrently --names 'BSB,WEBPACK,OPEN' -c 'bgBlue.bold,bgGreen.bold' 'yarn start:bscript' 'yarn start:webpack' 'yarn open'",
     "start:bscript": "bsb -make-world -w",
     "start:webpack": "webpack-dev-server --hot",
     "clean": "bsb -clean-world",
-    "build":
-      "bsb -clean-world && bsb -make-world && NODE_ENV=production webpack",
+    "build": "bsb -clean-world && bsb -make-world && NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
     "open": "open http://localhost:8080"
   },
-  "keywords": ["BuckleScript"],
+  "keywords": [
+    "BuckleScript"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
